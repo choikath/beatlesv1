@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beatles - CS171 Final Project</title>
+
+    <!-- CSS LIBRARIES -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.4.0/nouislider.css" integrity="sha512-DGB74Gyw93qON+V0QxSRs1er6sqoPyFoy23HBL5LN7MRJBcjeCU22zega+vOEGE0XQLoVrv4ExcaesSTwZQA2w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- YOUR CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+<!--    <img src="img/beatles.png" style="width:200px">-->
+    <h1>Evolution of the Beatles</h1>
+    <h2>Discography</h2>
+
+    <div class="container-fluid">
+        <!-- Left column: Bar Chart -->
+        <div class="d-flex flex-row">
+            <div class="align-self-center">
+                <div class="d-flex flex-row justify-content-left">
+
+                    <div class="col">
+
+                        <div class="d-flex flex-row">
+                        <div class="form-group">
+                            <!-- Select box to choose the ranking type -->
+                            <select class="form-control" id="plot-type">
+                                <option value="tracks">Tracks</option>
+                                <option value="streams">Streams</option>
+
+<!--                                <option value="pleasepleaseme">Please Please Me</option>-->
+<!--                                <option value="withthebeatles">With The Beatles</option>-->
+<!--                                <option value="harddaysnight">A Hard Day's Night</option>-->
+<!--                                <option value="beatlesforsale">Beatles for Sale</option>-->
+<!--                                <option value="help">Help!</option>-->
+<!--                                <option value="rubbersoul">Rubber Soul</option>-->
+<!--                                <option value="revolver">Revolver</option>-->
+<!--                                <option value="sgtpepper">Sgt Pepper's Lonely Hearts Band</option>-->
+<!--                                <option value="magicalmysterytour">Magical Mystery Tour</option>-->
+<!--                                <option value="whitealbum">The White Album</option>-->
+<!--                                <option value="abbeyroad">Abbey Road</option>-->
+<!--                                <option value="letitbe">Let It Be</option>-->
+<!--                                <option value="yellowsubmarine">Yellow Submarine</option>-->
+                            </select>
+                        </div>
+
+                        <div>
+
+                            <label for="time-period-slider" class="range-slider-value" id="lowerlabel">1963</label>
+                            <div class="slider-styled" id="time-period-slider"></div>
+                            <label for="time-period-slider" class="range-slider-value" id="upperlabel">1970</label>
+
+<!--                            <input type="range" class="form-range" id="time-period-slider">-->
+                        </div>
+                        </div>
+                        <!-- Parent container for the visualization -->
+                        <div id="chart-area"></div>
+
+
+                    </div>
+
+                    <div class="col">
+                        <div class="card" id="albumdetail">
+
+                            <h3 id="detailTitle" style="padding-top:0.1em"><p id="placeholder"><i>--Make a selection to see details--</i></p></h3>
+                            <div id="image-spot" style="text-align:center"><img></div>
+                            <table class="table table-striped sortable align-self-center" style="padding: 10px; width: 200px; border-color: #91988B; border-width: 2px">
+                                <thead>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="detailHeader">Released: </td>
+                                    <td id="detailDate"></td>
+                                </tr>
+                                <tr>
+                                    <td class="detailHeader">Track: </td>
+                                    <td id="detailTrack"></td>
+                                </tr>
+                                <tr>
+                                    <td class="detailHeader">Grammys: </td>
+                                    <td id="detailGrammys"></td>
+                                </tr>
+                                <tr>
+                                    <td class="detailHeader">Streams: </td>
+                                    <td id="detailStreams"></td>
+                                </tr>
+
+
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</div>
+
+<!-- embedding JS libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.4.0/nouislider.min.js"
+        integrity="sha512-mZXUH8DAODwCHioWP3gltQwa953LbABMlzTYwYkKqv8eNxOk37B1HgNNuCMfFxgrpW5C34WJbxPDcM58+s1dJA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- d3 -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<!-- Your implementation -->
+<script src="js/main.js"></script>
+</body>
+</html>
