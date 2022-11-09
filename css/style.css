@@ -55,7 +55,7 @@ td {font-size: 10px;}
   background-color: #FAFAFA;
   padding: 20px;
   margin-left: 20px;
-  border: thin solid #4B6D4A; border-radius: 5px
+  border: thin solid #0d0d23; border-radius: 5px
 }
 
 
@@ -143,7 +143,7 @@ td {font-size: 10px;}
 }
 
 .noUi-connect {
-  background: lightsteelblue;
+  background: #d8e6fc;
 }
 
 /*.col {*/
@@ -161,6 +161,23 @@ td {font-size: 10px;}
   font-size: 10px;
 }
 
+.track:hover {
+  /*opacity: 50%;*/
+  fill: black;
+/*  fill: goldenrod;*/
+/*  fill: darkorange;*/
+/*  fill: peachpuff;*/
+/*  fill: lightpink;*/
+/*  fill:navy;*/
+/*  fill: royalblue;*/
+/*  fill: teal*/
+/*  fill: mediumseagreen*/
+/*  fill: yellowgreen;*/
+/*  fill: mediumvioletred;*/
+/*  fill: rosybrown*/
+/*fill: lightskyblue*/
+/*fill: forestgreen;*/
+}
 
 #detailTitle {
   text-align: center;

@@ -23,7 +23,7 @@ let xscale = d3.scaleTime().domain([0,0]).range([0,width]);
 let yscale = d3.scaleLinear().domain([0,0]).range([height,0]);
 let durationscale = d3.scaleLinear().domain([0, 0]).range([0,20])
 // let color = d3.scaleLinear().range(["#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69","#fccde5","#d9d9d9","#bc80bd","#ccebc5","#ffed6f"]);
-let color = d3.scaleOrdinal().range(["gold", "blue", "green", "yellow", "grey", "darkgreen", "pink", "brown", "slateblue", "grey1", "orange", "steelblue"]);
+let color = d3.scaleOrdinal().range(["goldenrod", "darkorange", "peachpuff", "lightpink", "navy", "royalblue", "teal", "mediumseagreen", "yellowgreen", "mediumvioletred", "rosybrown", "lightskyblue", "forestgreen"]);
 
 // Axes
 let xAxis = d3.axisBottom();
@@ -176,7 +176,9 @@ function updateVisualization(plottype) {
 	circles.exit().remove()
 	circles.enter()
 		.append("circle")
-		.on("click", function(event, d) {
+		.attr("class", "track")
+		.on("mouseover", function(event, d) {
+
 			showEdition(d);
 		})
 		.merge(circles)
